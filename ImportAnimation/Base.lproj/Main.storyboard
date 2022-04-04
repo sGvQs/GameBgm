@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImportAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="snw-gc-x0D">
+                                <rect key="frame" x="38" y="104" width="338" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="c54-VP-5eZ"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="0.476018677" green="0.39933520039999998" blue="0.80995315310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="maximumTrackTintColor" red="0.476018677" green="0.39933520039999998" blue="0.80995315310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="thumbTintColor" red="0.75416712629577898" green="0.60151499299667699" blue="0.94333755970001221" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="sun:" destination="BYZ-38-t0r" eventType="valueChanged" id="hRG-bZ-qkm"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ulT-hL-gkx">
+                                <rect key="frame" x="0.0" y="224" width="414" height="568"/>
+                                <color key="backgroundColor" red="0.476018677" green="0.39933520039999998" blue="0.80995315310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQK-5x-6NR">
+                                <rect key="frame" x="20" y="64" width="374" height="38"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
+                                <state key="normal" title="play with me">
+                                    <color key="titleColor" red="0.75416712630000005" green="0.601514993" blue="0.94333755969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="StartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RgD-Ak-jfC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.47601867702463352" green="0.39933520043276599" blue="0.80995315313339233" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ulT-hL-gkx" secondAttribute="bottom" constant="70" id="43N-s1-Dks"/>
+                            <constraint firstItem="snw-gc-x0D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="7qR-5V-qWp"/>
+                            <constraint firstItem="UQK-5x-6NR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UYE-bv-Bnl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ulT-hL-gkx" secondAttribute="trailing" id="Z3j-F4-BKs"/>
+                            <constraint firstItem="snw-gc-x0D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="bVk-gn-PuV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UQK-5x-6NR" secondAttribute="trailing" constant="20" id="g6L-Bh-88Z"/>
+                            <constraint firstItem="ulT-hL-gkx" firstAttribute="top" secondItem="snw-gc-x0D" secondAttribute="bottom" constant="20" id="l3f-yh-5dh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="snw-gc-x0D" secondAttribute="trailing" constant="40" id="nP9-Wc-2yV"/>
+                            <constraint firstItem="UQK-5x-6NR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="wxN-rg-22x"/>
+                            <constraint firstItem="ulT-hL-gkx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zrw-gV-YOE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animationUI" destination="ulT-hL-gkx" id="cei-gv-1Hv"/>
+                        <outlet property="playB" destination="UQK-5x-6NR" id="IVy-cY-cYh"/>
+                        <outlet property="sunSlider" destination="snw-gc-x0D" id="cx6-0K-e0b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="373.91304347826087" y="44.866071428571423"/>
+        </scene>
+    </scenes>
+</document>
